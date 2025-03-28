@@ -13,13 +13,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Use Auto Tag Action PLEASE!!
+      - name: Use Auto Tag Action
         uses: stefan-richardson/test-tag-and-release-action@v1
         with:
           commit_message: ${{ github.event.head_commit.message }}
           java_version: "11"
           tag_prefix: "auto-tag-test"
-          dry_run: "true" # change to "false" when you want to test tagging
+          dry_run: "true" # Change value to false this will actually tag and publish
 
         env:
           SSH_KEY_GITHUB: ${{ secrets.SSH_KEY_GITHUB }}
