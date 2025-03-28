@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Use Auto Tag Action
+      - name: Use Auto Tag Action PLEASE!!
         uses: stefan-richardson/test-tag-and-release-action@v1
         with:
           commit_message: ${{ github.event.head_commit.message }}
