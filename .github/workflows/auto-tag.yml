@@ -19,7 +19,7 @@ jobs:
           commit_message: ${{ github.event.head_commit.message }}
           java_version: "11"
           tag_prefix: "auto-tag-test"
-          dry_run: "true" # Change value to false this will actually tag and publish
+          dry_run: "true" # Change value to "false" to tag and publish
 
         env:
           SSH_KEY_GITHUB: ${{ secrets.SSH_KEY_GITHUB }}
