@@ -23,3 +23,10 @@ task artifactoryPublish {
         println "Pretend we're uploading to Artifactory... version = $version"
     }
 }
+
+task addCredentials {
+    doLast {
+        println 'Setting up credentials for Artifactory...'
+        // Optional: Export or configure credentials dynamically if needed
+    }
+}
