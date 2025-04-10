@@ -26,7 +26,10 @@ task artifactoryPublish {
 
 task addCredentials {
     doLast {
-        def key = project.hasProperty('key') ? project.property('key') : 'NOT PROVIDED'
-        println "Setting up credentials with key = $key"
+        def username = project.hasProperty('artifactoryUsername') ? project.property('artifactoryUsername') : ''
+        def apiKey = project.hasProperty('artifactoryApiKey') ? project.property('artifactoryApiKey') : ''
+
+        println "Received Artifactory credentials: username=${username}, key length=${apiKey.length()}"
+        // Optional: use them to configure Artifactory if needed
     }
 }
